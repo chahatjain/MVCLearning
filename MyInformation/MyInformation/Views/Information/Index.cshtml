@@ -1,0 +1,31 @@
+﻿@model MyInformation.Models.MyInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                @Model.Name
+            </td>
+            <td>
+                @Model.ContactNumber
+            </td>
+            <td>
+                @Model.Place
+            </td>
+            <td>
+                SumOfTwoNumber : @Model.SumOfTwoNumber
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
