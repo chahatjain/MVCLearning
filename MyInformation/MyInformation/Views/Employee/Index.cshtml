@@ -1,0 +1,57 @@
+﻿@model MyInformation.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        @using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post))
+        {   
+            <tr>
+                <td>
+                    @Html.Label("Name")
+                </td>
+                <td>
+                  @*  @Html.TextBox("Name")*@
+                    @Html.TextBoxFor(s => s.Name)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    @Html.Label("Age")
+                      
+                </td>
+                <td>
+                    @*@Html.TextBox("Age")*@
+                    @Html.TextBoxFor(s => s.Age)
+                    
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td>
+                    @Html.Label("Gender")
+                </td>
+                <td>
+                    @*@Html.TextBox("Gender")*@
+                    @Html.TextBoxFor(s => s.Gender)
+
+                </td>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+     
+   
+        }
+    </table>
+</body>
+</html>
